@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bouich Ayoub Portfolio</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="Logo Figma.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script>
+        function btnf(event) {
+            if(event) event.preventDefault(); 
+            
+            alert("Thank you for the message");
+            window.location.href = "#head";
+        }
+    </script>
+</head>
+<body>
+
+ <div id="page">
+    <div class="cursor-circle"></div>
+    <header id="head">
+        <div class="container">
+        <nav>
+        <div class="logo">
+            <h1>AYOUB BOUICH</h1>            
+        </div>
+          <div class="link">
+              <ul>
+                   <li><a href="#head">HOME</a></li>
+                   <li><a href="#about">ABOUT</a></li>
+                   <li><a href="#project">PROJECTS</a></li>
+                   <li><a href="#contact">CONTACT</a></li>
+                   <li class="cv"><a href="CV ayoub bouich.pdf">CV</a></li>
+               </ul>
+          </div>
+        </nav>
+        </div>
+    </header>   
+    <section class="main-welcom">
+        <div class="container1">
+            <div class="my-img"><img src="ABBH.png">
+            </div>
+            <div class="welcom">
+                <p class="wc_p">Welcome to my portfolio</p>
+                <h2> Hi, I'm <span class="sp_ab">Ayoub Bouich</span></h2>
+                <h3>Full Stack Student </h3>
+                <p>I'am try to be able to craft beautiful Site web's</p>
+            </div>            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About me </h2>
+        <p>
+            I am a Full Stack Student passionate 
+            about crafting beautiful, responsive web experiences. 
+            I bridge the gap between creative design in Figma and clean, 
+            interactive code using HTML, CSS, and JavaScript, backed by basic PHP and SQL skills.
+        </p>
+    </section>
+    <section class="main_skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skills1">
+                <div class="ht">
+                    <h3>HTML5</h3>
+                    <p>100%</p>
+                    <div class="sp_ht"></div>
+                </div>
+                <div class="cs">
+                    <h3>CSS3</h3>
+                    <p>70%</p>
+                    <div class="sp_cs"></div>
+                </div>
+                <div class="js">
+                    <h3>Javascript</h3>
+                    <p>50%</p>
+                    <div class="sp_js"></div>
+                </div>
+            </div>
+            <div class="skills2">
+            <div class="jq">
+                <h3>Jquery</h3>
+                <p>20%</p>
+                <div class="sp_jq"></div>
+            </div>
+            <div class="bt">
+                <h3>Bootstrap</h3>
+                <p>10%</p>
+                <div class="sp_bt"></div>
+            </div>
+            <div class="design">
+                <h3>Ux Design</h3>
+                <p>80%</p>
+                <div class="sp_design"></div>
+            </div>  
+        </div>
+        </div>                  
+    </section>
+    <section class="project" id="project">
+        <h2>Featured Projects</h2>
+        <p class="p_project">Here is the project of the end of the first year.</p>
+        
+        <div class="cards">
+            <a href="https://bouichayoub18-alt.github.io/">
+            <img src="mini projet.png">
+            </a>
+            <h3>Let's Cycle </h3>
+            <p>A web site about all of things linked to cycling</p>
+            <ul>
+                <li><span>HTML5</span></li>
+                <li><span>CSS3</span></li>
+                <li><span>Javascript</span></li>
+            </ul>
+        </div>        
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="container4">
+            <div class="infos">
+                <h3>Let's collaborate to create outstanding web experiences.</h3>
+                <p>If you would like to work with us or just want to get in touch, <br>we'd love to hear from you</p>            
+                <p><span><a href="mailto:bouichayoub18@gmail.com">bouichayoub18@gmail.com</a></span></p>
+                <p><span>06-38-98-13-65</span></p>
+            </div>
+            <form>
+                <div class="nm_em">
+                    <input type="text" placeholder="Name"> 
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="mes_btn">
+                    <textarea placeholder="Message" cols="30" rows="10"></textarea>
+                <button id="btn" >SEND MESSAGE</button>
+                </div>                
+            </form>
+        </div>        
+    </section>
+    <footer>
+        <p>© 2026 BOUICH AYOUB</p>
+    </footer>
+
+</div>
+  <script>
+  const light = document.querySelector(".cursor-light");
+
+  document.addEventListener("mousemove", (e) => {
+    light.style.left = e.clientX + "px";
+    light.style.top = e.clientY + "px";
+  });
+
+        const cursor = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const navLinks1 = document.querySelectorAll('nav ul li a, .logo, #cards a');
+
+        navLinks1.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+        const button=document.getElementById('btn');
+        button.addEventListener("click", btnf);
+</script>
+</body>
+</html>
